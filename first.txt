@@ -26,3 +26,6 @@ git repository : is basically a folder , which saves all the changes(history) wh
 		  git stash pop
 		  git stash clear
 Bhai mai ye add kar raha hu
+
+ git remote add origin https://github.com/Ritwik-1/FirstRepo.git
+
