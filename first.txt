@@ -1,0 +1,28 @@
+git repository : is basically a folder , which saves all the changes(history) which are done to a project by any 
+		     user who is part of that project.
+
+1) git init : To initialize a git repository for the current working folder/project
+		  cd to the folder and type git init , a hidden file .git will be created in that folder 
+              which can be seen via ls -a
+2) git status : all the files which were modified appear in red and if they are staged for commit then they appear in green
+		    
+3) git add . : adds all the untracked / unstaged files to the stage
+   git add file1 file 2 : another way to add only specific files.
+   git restore --staged filename1 filename2 .. : unstage/untrack file for it to be commited.
+
+4) git commit -m "message" : commit the change to the repo
+
+5) git log : prints history of all commits by all users.
+
+6) git reset [hashnumber] : each commit has a unique hashnumber displayed when we do "git log"
+				    this command is used to delete/unstage all commits from log above 
+				    a particular commit( as we cannot remove a commit from inbetween)
+7) stashing : say you made some changes in the files and do not want to commit that now and want to do that later 
+		  then we can add those changes to backstage sort of area and finally we would be left with only the progress which 
+		  we had made before this.
+		  we can pop this stash and get all the backstage changes to the present project again
+		  we can also clear this stash by a command which will delete all these backstage changes forever
+		  git stash
+		  git stash pop
+		  git stash clear
+Bhai mai ye add kar raha hu
