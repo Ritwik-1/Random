@@ -1,0 +1,6 @@
+This is check for main pe push kar sakte hai?
+actually git ka root -> master
+but github pe root -> main
+so when we do git push origin master -> it's creating a new branch called master 
+hence master -> master
+i.e master of git is pointing master branch of github IG.
