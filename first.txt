@@ -25,7 +25,17 @@ git repository : is basically a folder , which saves all the changes(history) wh
 		  git stash
 		  git stash pop
 		  git stash clear
-Bhai mai ye add kar raha hu
 
- git remote add origin https://github.com/Ritwik-1/FirstRepo.git
+8) git remote add origin https://github.com/Ritwik-1/FirstRepo.git : here origin is the name of the link
+										      
+9) git remote -v : to check the fetch and pull url associated with the repo
+
+10) master is the main branch we can create more branches of the main branch and can do work on it seperately
+    and then merge that branch to the main branch once we are sure to make the main master branch correct always
+
+11) git push origin master : to push the commit made to the project on github / (origin url) 
+
+BRANCHES :
+
+
 
