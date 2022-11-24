@@ -6,6 +6,7 @@
 #include <time.h>
 #include <math.h>
 #include <string.h>
+#include <sched.h>
 
 #define BILLION 1000000000L;
 
@@ -36,14 +37,9 @@ int main(){
 
         char buff[20];
         sprintf(buff,"%d",getpid());
-        char comm[100] = "/usr/bin/chrt -o -p 0 ";
-        strcat(comm,buff);
-        system(comm);
-
-        // char comm2[100] = "/usr/bin/chrt -p ";
-        // strcat(comm2,buff);
-
-        // system(comm2);
+        struct sched_param p1;
+        p1.sched_priority = 10;
+        sched_setscheduler(pid1,SCHED_OTHER,p1);
 
         char* comm3[2]={NULL};
         // execvp("./kernel1.sh",comm3);
@@ -60,14 +56,9 @@ int main(){
             char buff[20];
             sprintf(buff,"%d",getpid());
 
-            char comm[100] = "/usr/bin/chrt -r -p 50 ";
-            strcat(comm,buff);
-            system(comm);
-
-            // char comm2[100] = "/usr/bin/chrt -p ";
-            // strcat(comm2,buff);
-
-            // system(comm2);
+            struct sched_param p2;
+            p2.sched_priority = 20;
+            sched_setscheduler(pid2,SCHED_RR,p2);
 
             char* comm3[2]={NULL};
             // execvp("./kernel1.sh",comm3);
@@ -83,12 +74,9 @@ int main(){
                 char buff[20];
                 sprintf(buff,"%d",getpid());
 
-                char comm[100] = "/usr/bin/chrt -f -p 50 ";
-                strcat(comm,buff);
-                system(comm);
-
-                // char comm2[100] = "/usr/bin/chrt -p ";
-                // strcat(comm2,buff);
+                 struct sched_param p3;
+                 p3.sched_priority = 30;
+                 sched_setscheduler(pid2,SCHED_FIFO,p3);
 
                 // system(comm2);
 
